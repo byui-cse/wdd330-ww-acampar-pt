@@ -4,7 +4,7 @@
   /* colors */
   --primary-color: #f0a868;
   --secondary-color: #525b0f;
-  --tertiary-color: #a4b8c4;
+  --tertiary-color: #8a470c;
   --light-grey: #d0d0d0;
   --dark-grey: #303030;
 
@@ -15,11 +15,12 @@
 }
 
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
   font-family: var(--font-body);
   font-size: var(--font-base);
   color: var(--dark-grey);
@@ -32,7 +33,11 @@ img {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: .5rem;
+}
+
+p {
+  padding: .75rem;
 }
 
 .logo {
@@ -62,7 +67,7 @@ header {
 .hero .logo {
   position: absolute;
   left: calc(50% - 60px);
-  bottom: -10px;
+  bottom: -15px;
   background-color: white;
 }
 
@@ -129,23 +134,33 @@ button {
 /* End cart icon styles */
 
 .mission {
-  padding: 0 0.5em;
-  /* margin: 0.5em 0; */
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
   line-height: 1.3;
-  max-width: 600px;
-  margin: auto;
+  width: 100%;
+  background-color: var(--dark-grey);
+  color: var(--light-grey);
+  opacity: .8;
+}
+
+.mission p {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;;
 }
 
 .products {
-  padding: 0.5em;
+  margin-top: 2rem;
+  padding: 1rem;
 }
 
 .product-list {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   list-style-type: none;
-  padding: 0;
+  justify-content: center;
 }
 
 .product-list a {
