@@ -92,7 +92,7 @@ export default class ProcessoFinalizacaoCompra {
     //console.log(pedido);
 
     try {
-      const resposta = await servicos.checkout(pedido);
+      const resposta = await servicos.finalizar_compra(pedido);
       console.log(resposta);
     } catch (erro) {
       console.log(erro);

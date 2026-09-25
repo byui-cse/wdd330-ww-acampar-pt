@@ -26,7 +26,7 @@ export default class ServicosExternos {
     return dados.Result;
   }
 
-  async checkout(payload) {
+  async finalizar_compra(payload) {
     const options = {
       method: "POST",
       headers: {
