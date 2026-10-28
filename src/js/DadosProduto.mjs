@@ -9,7 +9,7 @@ function converterParaJson(resposta) {
 export default class DadosProduto {
   constructor(categoria) {
     this.categoria = categoria;
-    this.caminho = `../publico/json/${this.categoria}.json`;
+    this.caminho = `../json/${this.categoria}.json`;
   }
   obterDados() {
     return fetch(this.caminho)
