@@ -6,11 +6,11 @@ const fonteDados = new DadosProduto("barracas");
 const idProduto = obterParametro("produto");
 
 const produto = new DetalhesProduto(idProduto, fonteDados);
-produto.init();
+produto.inicializar();
 
 // // manipulador de evento do botão adicionar ao carrinho
 // async function manipuladorAdicionarAoCarrinho(e) {
-//   const produto = await fonteDados.encontrarProdutoPorId(e.target.dataset.id);
+//   const produto = await fonteDados.buscarProdutoPorId(e.target.dataset.id);
 //   adicionarProdutoAoCarrinho(produto);
 // }
 

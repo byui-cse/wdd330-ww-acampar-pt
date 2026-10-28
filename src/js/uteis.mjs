@@ -1,9 +1,9 @@
 // invólucro para querySelector...retorna elemento correspondente
-export function obterElemento(seletor, elementoPai = document) {
+export function seletorRapido(seletor, elementoPai = document) {
   return elementoPai.querySelector(seletor);
 }
 // ou uma versão mais concisa, se preferir:
-// export const obterElemento = (seletor, elementoPai = document) => elementoPai.querySelector(seletor);
+// export const seletorRapido = (seletor, elementoPai = document) => elementoPai.querySelector(seletor);
 
 // recuperar dados do localstorage
 export function obterArmazenamentoLocal(chave) {
@@ -15,11 +15,11 @@ export function definirArmazenamentoLocal(chave, dados) {
 }
 // definir um ouvinte para touchend e click
 export function definirClique(seletor, funcaoRetorno) {
-  obterElemento(seletor).addEventListener("touchend", (evento) => {
+  seletorRapido(seletor).addEventListener("touchend", (evento) => {
     evento.preventDefault();
     funcaoRetorno();
   });
-  obterElemento(seletor).addEventListener("click", funcaoRetorno);
+  seletorRapido(seletor).addEventListener("click", funcaoRetorno);
 }
 
 // obter o id do produto da query string
