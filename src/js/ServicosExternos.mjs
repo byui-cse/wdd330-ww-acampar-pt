@@ -1,10 +1,13 @@
 const baseURL = import.meta.env.VITE_SERVER_URL;
 
-function converterParaJson(res) {
+async function converterParaJson(res) {
+  // converte o corpo da resposta para JSON antes de verificar se está ok
+  const respostaJson = await res.json();
   if (res.ok) {
-    return res.json();
+    return respostaJson;
   } else {
-    throw new Error("Resposta Incorreta");
+    // envia o corpo da resposta para quem chamou, com as mensagens do servidor
+    throw { name: "erroServicos", message: respostaJson };
   }
 }
 

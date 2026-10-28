@@ -1,4 +1,9 @@
-import { obterArmazenamentoLocal } from "./uteis.mjs";
+import {
+  obterArmazenamentoLocal,
+  definirArmazenamentoLocal,
+  mensagemAlerta,
+  removerTodosAlertas,
+} from "./uteis.mjs";
 import ServicosExternos from "./ServicosExternos.mjs";
 
 const servicos = new ServicosExternos();
@@ -92,10 +97,16 @@ export default class ProcessoFinalizacaoCompra {
     //console.log(pedido);
 
     try {
-      const resposta = await servicos.finalizar_compra(pedido);
-      console.log(resposta);
+      await servicos.finalizar_compra(pedido);
+      // pedido realizado: limpa o carrinho e leva a pessoa para a página de sucesso
+      definirArmazenamentoLocal(this.chave, []);
+      location.assign("/finalizar_compra/sucesso.html");
     } catch (erro) {
-      console.log(erro);
+      // remove os alertas antigos e mostra cada mensagem enviada pelo servidor
+      removerTodosAlertas();
+      const mensagens =
+        typeof erro.message === "object" ? Object.values(erro.message) : [erro.message];
+      mensagens.forEach((mensagem) => mensagemAlerta(mensagem));
     }
   }
 }

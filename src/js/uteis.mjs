@@ -62,3 +62,27 @@ export async function carregarHeaderFooter() {
   renderizarComModelo(modeloHeader, elementoHeader);
   renderizarComModelo(modeloFooter, elementoFooter);
 }
+
+// exibe uma mensagem de alerta no topo do main
+export function mensagemAlerta(mensagem, rolar = true) {
+  // cria o elemento que vai conter o alerta
+  const alerta = document.createElement("div");
+  alerta.classList.add("alerta");
+  alerta.innerHTML = `<p>${mensagem}</p><span>X</span>`;
+  // remove o alerta quando a pessoa clicar no X
+  alerta.addEventListener("click", function (e) {
+    if (e.target.tagName === "SPAN") {
+      main.removeChild(this);
+    }
+  });
+  // adiciona o alerta no topo do main
+  const main = document.querySelector("main");
+  main.prepend(alerta);
+  // rola até o topo para garantir que a pessoa veja o alerta
+  if (rolar) window.scrollTo(0, 0);
+}
+
+// remove todos os alertas da página
+export function removerTodosAlertas() {
+  document.querySelectorAll(".alerta").forEach((alerta) => alerta.remove());
+}

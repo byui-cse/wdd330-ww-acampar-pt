@@ -14,6 +14,9 @@ document
 // ouvindo o clique no botão
 document.querySelector("#finalizar_compraEnviar").addEventListener("click", (e) => {
   e.preventDefault();
-
-  pedido.finalizar_compra();
+  // só envia o pedido se o formulário passar na validação do HTML
+  const meuFormulario = document.forms[0];
+  const formularioValido = meuFormulario.checkValidity();
+  meuFormulario.reportValidity();
+  if (formularioValido) pedido.finalizar_compra();
 });

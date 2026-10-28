@@ -310,3 +310,23 @@ footer {
   border-top: 1px solid var(--cor-terciaria);
   padding: 1em;
 }
+/* mensagens de alerta (mensagemAlerta em uteis.mjs) */
+.alerta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  margin-bottom: 0.5em;
+  background-color: var(--cor-primaria);
+  border: 1px solid var(--cor-terciaria);
+}
+
+.alerta p {
+  margin: 0;
+}
+
+.alerta span {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0 0.4em;
+}
