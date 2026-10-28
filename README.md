@@ -1,11 +1,12 @@
 # BYU-Pathway Worldwide Online
-## WDD 330 - Web Frontend Development II
 
-### ⛺ SleepOutside Example Solution
+## WDD 330 - Desenvolvimento Web Front-end II
 
- - W02 Team Activity: Dynamic Product Detail Pages
+### ⛺ Solução de Exemplo do Acampar
 
- - https://byui-cse.github.io/wdd330-ww-course/week02/team.html
+- S02 - Atividade em Equipe: Página Dinâmica de Detalhes do Produto
+
+- <https://byui-cse.github.io/wdd330-ww-course-pt/week02/team.html>
 
 ---
-_BYU-Pathway Worldwide improves lives through access to spiritually based, online affordable higher education. Its mission is to develop disciples of Jesus Christ who are leaders in their homes, the Church, and their communities._
+_A BYU-Pathway Worldwide melhora vidas por meio do acesso a uma educação superior online, acessível e baseada em princípios espirituais. Sua missão é formar discípulos de Jesus Cristo que sejam líderes em seus lares, na Igreja e em suas comunidades._
