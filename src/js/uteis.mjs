@@ -1,11 +1,11 @@
 // uteis.mjs
 
 // atalho para querySelector... retorna o elemento correspondente
-export function qs(seletor, pai = document) {
+export function seletorRapido(seletor, pai = document) {
   return pai.querySelector(seletor);
 }
 // ou uma versão mais concisa se você gostar desse tipo de coisa:
-// export const qs = (seletor, pai = document) => pai.querySelector(seletor);
+// export const seletorRapido = (seletor, pai = document) => pai.querySelector(seletor);
 
 // recupera dados do armazenamento local (localStorage)
 export function obterArmazenamentoLocal(chave) {
@@ -18,10 +18,10 @@ export function definirArmazenamentoLocal(chave, dados) {
 }
 
 // configura um ouvinte tanto para touchend quanto para click
-export function configurarClique(seletor, acao) {
-  qs(seletor).addEventListener("touchend", (evento) => {
+export function definirClique(seletor, funcaoRetorno) {
+  seletorRapido(seletor).addEventListener("touchend", (evento) => {
     evento.preventDefault();
-    acao();
+    funcaoRetorno();
   });
-  qs(seletor).addEventListener("click", acao);
+  seletorRapido(seletor).addEventListener("click", funcaoRetorno);
 }
