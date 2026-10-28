@@ -14,13 +14,13 @@ export default class DadosProduto {
     // this.caminho = `../publico/json/${this.categoria}.json`;
   }
   async obterDados(categoria) {
-    const resposta = await fetch(`${baseURL}products/search/${categoria}`);
+    const resposta = await fetch(`${baseURL}produtos/busca/${categoria}`);
     const dados = await converterParaJson(resposta);
     
     return dados.Result;
   }
   async buscarProdutoPorId(id) {
-    const resposta = await fetch(`${baseURL}product/${id}`);
+    const resposta = await fetch(`${baseURL}produto/${id}`);
     const dados = await converterParaJson(resposta);
     console.log(dados.Result);
     return dados.Result;
