@@ -15,5 +15,5 @@ document
 document.querySelector("#finalizar_compraEnviar").addEventListener("click", (e) => {
   e.preventDefault();
 
-  pedido.finalizar_compra();
+  pedido.finalizarCompra();
 });
