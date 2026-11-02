@@ -2,7 +2,7 @@
 
 ## WDD 330 - Desenvolvimento Web Front-end II
 
-### ⛺ Solução de Exemplo do Acampar
+### ⛺ Exemplo de Solução do Acampar
 
 - S02 - Atividade Individual: Lista Dinâmica de Produtos
 
