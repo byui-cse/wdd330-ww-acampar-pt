@@ -12,7 +12,7 @@ document
   .addEventListener("blur", pedido.calcularTotalPedido.bind(pedido));
 
 // ouvindo o clique no botão
-document.querySelector("#finalizar_compraEnviar").addEventListener("click", (e) => {
+document.querySelector("#finalizarCompraEnviar").addEventListener("click", (e) => {
   e.preventDefault();
 
   pedido.finalizarCompra();
