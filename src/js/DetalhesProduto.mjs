@@ -27,11 +27,11 @@ export default class DetalhesProduto {
   }
 
   renderizarDetalhesProduto() {
-    ModeloDetalhesProduto(this.produto);
+    modeloDetalhesProduto(this.produto);
   }
 }
 
-function ModeloDetalhesProduto(produto) {
+function modeloDetalhesProduto(produto) {
   document.querySelector('h2').textContent = produto.Marca.Nome;
   document.querySelector('h3').textContent = produto.NomeSemMarca;
 
@@ -47,7 +47,7 @@ function ModeloDetalhesProduto(produto) {
 }
 
 // ************* Método Alternativo de Exibição de Detalhes do Produto *******************
-// function ModeloDetalhesProduto(produto) {
+// function modeloDetalhesProduto(produto) {
 //   return `<section class="detalhe-produto"> <h3>${produto.Marca.Nome}</h3>
 //     <h2 class="divisor">${produto.NomeSemMarca}</h2>
 //     <img
