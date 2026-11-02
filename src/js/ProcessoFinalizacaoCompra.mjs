@@ -85,7 +85,7 @@ export default class ProcessoFinalizacaoCompra {
     totalPedidoEl.innerText = `R$${this.totalPedido.toFixed(2)}`;
   }
 
-  async finalizar_compra() {
+  async finalizarCompra() {
     const elementoFormulario = document.forms["finalizar_compra"];
     const pedido = dadosFormularioParaJSON(elementoFormulario);
 
@@ -97,7 +97,7 @@ export default class ProcessoFinalizacaoCompra {
     //console.log(pedido);
 
     try {
-      await servicos.finalizar_compra(pedido);
+      await servicos.finalizarCompra(pedido);
       // pedido realizado: limpa o carrinho e leva a pessoa para a página de sucesso
       definirArmazenamentoLocal(this.chave, []);
       location.assign("/finalizar_compra/sucesso.html");

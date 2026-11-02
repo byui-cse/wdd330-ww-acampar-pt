@@ -2,7 +2,7 @@
 
 ## WDD 330 - Desenvolvimento Web Front-end II
 
-### ⛺ Solução de Exemplo do Acampar
+### ⛺ Exemplo de Solução do Acampar
 
 - S04 - Atividade Individual: Validação e Verificação de Erros
 

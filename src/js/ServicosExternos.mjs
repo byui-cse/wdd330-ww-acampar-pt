@@ -29,7 +29,7 @@ export default class ServicosExternos {
     return dados.Result;
   }
 
-  async finalizar_compra(payload) {
+  async finalizarCompra(payload) {
     const options = {
       method: "POST",
       headers: {

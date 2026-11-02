@@ -18,5 +18,5 @@ document.querySelector("#finalizar_compraEnviar").addEventListener("click", (e) 
   const meuFormulario = document.forms[0];
   const formularioValido = meuFormulario.checkValidity();
   meuFormulario.reportValidity();
-  if (formularioValido) pedido.finalizar_compra();
+  if (formularioValido) pedido.finalizarCompra();
 });
