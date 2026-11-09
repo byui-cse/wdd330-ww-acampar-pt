@@ -1,6 +1,6 @@
 # BYU-Pathway Worldwide Online
 
-## WDD 330 - Desenvolvimento Web Front-end II
+## WDD 330 - Desenvolvimento Frontend para Web II
 
 ### ⛺ Exemplo de Solução do Acampar
 
